@@ -53,7 +53,8 @@ export default function LoadMore() {
           <button disabled={count === 4} onClick={() => setCount(count + 1)}>Load More Data</button>
         </div>
         <span>
-            {count === 4 ? "Reached 100 limit" : null}
+            {count === 4
+             ? "Reached 100 limit" : null}
         </span>
       </div>
     </>
