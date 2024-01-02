@@ -52,10 +52,10 @@ button{
     padding: 6px 12px;
     font-weight: 400;
     font-size: 20px;
-   
     border-radius: 10px;
     cursor: pointer;
 }
+
 
 @keyframes animateModel {
   from {

@@ -2,6 +2,7 @@ import "./App.css";
 import Accordian from "./components/accordian";
 import ModelTest from "./components/custom-model/model-test";
 import TabTest from "./components/custom-tabs/tabs-test";
+import GithubProfile from "./components/github-profile";
 import ImageSlider from "./components/image-slider";
 import LightDarkMode from "./components/light-dark-mode";
 import LoadMore from "./components/load-more";
@@ -22,10 +23,11 @@ function App() {
       <LoadMore /> 
       <TreeView menus={menus} />
       <QrCodeGenerator /> */}
-      {/* <LightDarkMode /> */}
-      {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} /> */}
-      {/* <TabTest /> */}
-      <ModelTest />
+      {/* <LightDarkMode /> 
+     <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} /> 
+      <TabTest /> 
+      <ModelTest /> */}
+      <GithubProfile />
     </>
   );
 }
