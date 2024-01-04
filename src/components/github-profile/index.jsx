@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import User from "./user";
+import "./styles.css";
 
 export default function GithubProfile() {
   const [userName, setUserName] = useState("Saud9884");
@@ -23,21 +24,21 @@ export default function GithubProfile() {
     }
   }
 
-  function handleSearch(){
+  function handleSearch() {
     fetchGithuProfile();
   }
 
   useEffect(() => {
     fetchGithuProfile();
-  },[]);
+  }, []);
 
-  if(loading){
-    return <div>Loading Data...</div>
+  if (loading) {
+    return <div>Loading Data...</div>;
   }
   return (
     <div>
       <div className="github-profile-container">
-        <div className="inputwrapper">
+        <div className="input-wrapper">
           <input
             type="text"
             placeholder="Search Github Profile by Username"
@@ -46,9 +47,7 @@ export default function GithubProfile() {
           />
           <button onClick={handleSearch}>Search</button>
         </div>
-         {
-            userData !== null ? <User user={userData} /> : 'something wrong'
-         }
+        {userData !== null ? <User user={userData} /> : "something wrong"}
       </div>
     </div>
   );
