@@ -15,7 +15,7 @@ export default function ModelTest() {
   }
   return (
     <div className="center">
-      <button onClick={handleToggle}>Open Model</button>
+      <button className="button" onClick={handleToggle}>Open Model</button>
       {showModel && <Model onClose={onClose} body={"Random Body Data"} />}
     </div>
   );
