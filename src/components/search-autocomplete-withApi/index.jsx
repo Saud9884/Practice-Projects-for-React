@@ -42,7 +42,11 @@ export default function SearchAutocomplete() {
     fetchUsers();
   }, []);
 
-  console.log(users, filteredUsers);
+  function handleSelect(e){
+    setShowDropDown(false);
+    setSearchParam(e.target.innerText);
+    setFilteredUsers([]);
+  }
 
   if (loading) {
     return <div>Loading data...</div>;
@@ -57,7 +61,7 @@ export default function SearchAutocomplete() {
       />
 
       {
-        showdropDown ? <Suggestions data={filteredUsers}/> : null
+        showdropDown ? <Suggestions handleSelect={handleSelect} data={filteredUsers}/> : null
       }
     </div>
   );
