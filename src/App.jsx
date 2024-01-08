@@ -2,6 +2,8 @@ import "./App.css";
 import Accordian from "./components/accordian";
 import ModelTest from "./components/custom-model/model-test";
 import TabTest from "./components/custom-tabs/tabs-test";
+import FeatureFlag from "./components/feature-flag";
+import FeatureFlagGlobalState from "./components/feature-flag/context";
 import GithubProfile from "./components/github-profile";
 import ImageSlider from "./components/image-slider";
 import LightDarkMode from "./components/light-dark-mode";
@@ -31,7 +33,11 @@ function App() {
       <ModelTest /> */}
       {/* <GithubProfile /> */}
       {/* <SearchAutocomplete /> */}
-      <TicTacToe />
+      {/* <TicTacToe /> */}
+
+    <FeatureFlagGlobalState>
+      <FeatureFlag />
+    </FeatureFlagGlobalState>
     </>
   );
 }
