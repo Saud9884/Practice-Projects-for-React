@@ -6,41 +6,40 @@ import RandomColor from "../random-color";
 import { featureFlagContext } from "./context";
 
 export default function FeatureFlag() {
+  const { loading, enabledFlags } = useContext(featureFlagContext);
 
-     const {loading, enabledFlags} = useContext(featureFlagContext)
+  const componentsToRender = [
+    {
+      key: "showAccordian",
+      component: <Accordian />,
+    },
+    {
+      key: "showRandomColor",
+      component: <RandomColor />,
+    },
+    {
+      key: "showQrGenerator",
+      component: <QrCodeGenerator />,
+    },
+    {
+      key: "shoeLightdark",
+      component: <LightDarkMode />,
+    },
+  ];
 
-    const componentsToRender = [
-        {
-            key : "showAccordian",
-            component : <Accordian />
-        },
-        {
-            key : "showRandomColor",
-            component : <RandomColor />
-        },
-        {
-            key : "showQrGenerator",
-            component : <QrCodeGenerator />
-        },
-        {
-            key : "shoeLightdark",
-            component : <LightDarkMode />
-        },
-    ]
+  function checkEnabledFlags(getCurrentKey) {
+    return enabledFlags[getCurrentKey];
+  }
 
-    function checkEnabledFlags(getCurrentKey){
-        return enabledFlags[getCurrentKey];
-    }
-
-    if(loading){
-        return <h1>Loading Data...</h1>
-    }
+  if (loading) {
+    return <h1>Loading Data...</h1>;
+  }
   return (
     <div>
       <h1>Feature Flag</h1>
-      {
-        componentsToRender.map(componentItem => checkEnabledFlags(componentItem.key) ? componentItem.component : null )
-      }
+      {componentsToRender.map((componentItem) =>
+        checkEnabledFlags(componentItem.key) ? componentItem.component : null
+      )}
     </div>
   );
 }
