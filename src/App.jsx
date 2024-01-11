@@ -18,23 +18,24 @@ import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
 import UseFetchHookTest from "./components/use-fetch/test";
 import UseOutsideClickHookTest from "./components/use-outside-click/test";
+import UseWindowResizeHook from "./components/use-window-resize/test";
 
 
 function App() {
   return (
     <>
-      {/* <Accordian />
+       {/* <Accordian />
       <RandomColor />
       <StarRating />
       <ImageSlider url={'https://picsum.photos/v2/list'} limit={"10"} page={"1"} /> 
       <LoadMore /> 
       <TreeView menus={menus} />
-      <QrCodeGenerator /> */}
-       {/* <LightDarkMode />  */}
+      <QrCodeGenerator /> 
+       <LightDarkMode />   */}
      {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />  */}
       {/* <TabTest /> 
       <ModelTest /> */}
-      {/* <GithubProfile /> */}
+       {/* <GithubProfile /> */}
       {/* <SearchAutocomplete /> */}
       {/* <TicTacToe /> */}
 
@@ -42,7 +43,8 @@ function App() {
       <FeatureFlag />
     </FeatureFlagGlobalState> */}
     {/* <UseFetchHookTest /> */}
-    <UseOutsideClickHookTest />
+    {/* <UseOutsideClickHookTest /> */}
+    <UseWindowResizeHook />
     
     </>
   );
