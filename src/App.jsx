@@ -11,6 +11,7 @@ import LoadMore from "./components/load-more";
 import QrCodeGenerator from "./components/qr-code-generator";
 import RandomColor from "./components/random-color";
 import ScrollIndicator from "./components/scroll-indicator";
+import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom";
 import SearchAutocomplete from "./components/search-autocomplete-withApi";
 import StarRating from "./components/star-rating";
 import TicTacToe from "./components/tic-tac-toe";
@@ -44,7 +45,8 @@ function App() {
     </FeatureFlagGlobalState> */}
     {/* <UseFetchHookTest /> */}
     {/* <UseOutsideClickHookTest /> */}
-    <UseWindowResizeHook />
+    {/* <UseWindowResizeHook /> */}
+    <ScrollToTopAndBottom />
     
     </>
   );
